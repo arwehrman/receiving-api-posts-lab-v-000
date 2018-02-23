@@ -24,12 +24,11 @@
 <script type="text/javascript" charset="utf-8">
   $(function () {
     $('form').submit(function(event) {
-      //prevent form from submitting the default way
       event.preventDefault();
 
-      var values = $(this).serialize();
+      let values = $(this).serialize();
 
-      var posting = $.product('/products', values);
+      let posting = $.post('/products', values);
 
         posting.done(function(data) {
         var product = data;
