@@ -22,9 +22,9 @@
 
       var values = $(this).serialize();
 
-      var newProduct = $.product('/products', values);
+      var posting = $.product('/products', values);
 
-        newProduct.done(function(data) {
+        posting.done(function(data) {
         var product = data;
         $("#productName").text(product["name"]);
           $("#productPrice").text(product["price"]);
