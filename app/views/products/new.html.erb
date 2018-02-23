@@ -22,14 +22,14 @@
 
       var values = $(this).serialize();
 
-      var posting = $.product('/products', values);
+      var newProduct = $.product('/products', values);
 
-      posting.done(function(data) {
+        newProduct.done(function(data) {
         var product = data;
-        $("#productName").text(post["name"]);
-          $("#productPrice").text(post["price"]);
-        $("#productDescription").text(post["description"]);
-          $("#productInventory").text(post["inventory"]);
+        $("#productName").text(product["name"]);
+          $("#productPrice").text(product["price"]);
+        $("#productDescription").text(product["description"]);
+          $("#productInventory").text(product["inventory"]);
       });
     });
   });
